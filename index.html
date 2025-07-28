@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Ticket Booking Date Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="page-body">
+    <div class="card">
+        <h2 class="card-title">Train Ticket Booking Date Calculator</h2>
+        <label for="journeyDate" class="form-label">Select Journey Date:</label>
+        <input type="date" id="journeyDate" class="form-control">
+        <button onclick="calculateBookingDate()" class="btn btn-primary">Calculate Booking Open Date</button>
+        <div id="result" class="alert alert-success"></div>
+
+        <!-- Table inside the card -->
+        <div class="table-container">
+            <h3 class="table-title">Booking Open Dates</h3>
+            <table class="booking-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Booking Opens For</th>
+                    </tr>
+                </thead>
+                <tbody id="bookingTableBody">
+                    <!-- Rows will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Reminder section -->
+        <div class="reminder-container">
+            <h3 class="reminder-title">Set a Reminder</h3>
+            <label for="searchDate" class="form-label">Enter Booking Opening Date:</label>
+            <input type="date" id="searchDate" class="form-control">
+            <button onclick="setReminder()" class="btn btn-primary">Set Reminder</button>
+            <div id="reminderMessage" class="alert"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
